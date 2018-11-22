@@ -8,6 +8,7 @@ function App() {
     return (
         <Provider store={store}>
             <div className="app">
+                <Navbar/>
                 <Landing />
                 <Footer />
             </div>

@@ -6,18 +6,21 @@ class VenueItem extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      error: "",
     };
     // this.onSubmit = this.onSubmit.bind(this);
   }
 
   render() {
+    const { name, categories } = this.props.venue;
     console.log(this.props.venue);
-     const { name ,categories} = this.props.venue;
-
     return (
-      <th><div className="list_item"><div>{name}</div><div>{categories[0].name}</div></div></th>
+      <th>
+        <div className="list_item">
+          <div>{name}</div>
+          <div>{categories[0].name}</div>
+        </div>
+      </th>
     );
   }
 }
-export default connect(null,)(VenueItem);
+export default connect(null, )(VenueItem);

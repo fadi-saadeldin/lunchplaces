@@ -4,10 +4,10 @@ export  function SearchInput({value, handleChange,handleSubmit,placeholder}) {
   return (
     <form onSubmit={handleSubmit}>
         <label>
-          Name:
+          Search Address: 
           <input type="text" value={value} onChange={handleChange} />
         </label>
-        <input type="submit" value="Submit" />
+        <input type="submit" value="Search" />
       </form>
   )
 }
