@@ -12,10 +12,11 @@ class VenueItem extends Component {
   }
 
   render() {
-     const { name } = this.props.venue;
+    console.log(this.props.venue);
+     const { name ,categories} = this.props.venue;
 
     return (
-      <th><div className="list_item">{name}</div></th>
+      <th><div className="list_item"><div>{name}</div><div>{categories[0].name}</div></div></th>
     );
   }
 }

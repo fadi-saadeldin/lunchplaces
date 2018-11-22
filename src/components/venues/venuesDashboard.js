@@ -9,7 +9,6 @@ class VenuesDashboard extends Component {
   constructor(props) {
     super(props);
     this.state = {searchValue: ''};
-
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -22,12 +21,6 @@ class VenuesDashboard extends Component {
    this.props.getVenues(this.state.searchValue);
     event.preventDefault();
   }
-
-  // componentWillReceiveProps(nextProps) {
-  //   if (nextProps.devices.update_success) {
-  //     this.setState({ searchTrue: false, searchValue: '' });
-  //   }
-  // }
   render() {
     const { venues_list, loading } = this.props.venues;
     console.log(this.props.venues);
@@ -41,7 +34,7 @@ class VenuesDashboard extends Component {
       venuesContent=<div/>
     } else {
     if (Object.keys(venues_list).length > 0) {
-      //  Devices List content
+      //  Venues List content
       console.log(venues_list);
       venuesContent = <VenuesList
         venues={venues_list}
